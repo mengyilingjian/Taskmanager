@@ -16,9 +16,11 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->comment('项目名称');
-            $table->string('thumbnail')->comment('缩略图');
+            $table->string('thumbnail')->nullable()->comment('缩略图');
             $table->timestamps();
         });
+
+
     }
 
     /**
