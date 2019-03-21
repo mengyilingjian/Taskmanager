@@ -29,8 +29,13 @@
 
                         {!! Form::file('thumbnail', ['class'=>'form-control-file']) !!}
                     </div>
+
+                    {{-- 判断提交的时候是否报错 --}}
+                    @include('errors._errors')
+
                 </div>
                 <div class="modal-footer">
+
                     {!! Form::submit('新建表单', ['class'=>'btn btn-primary']) !!}
                 </div>
                 {!! Form::close() !!}
