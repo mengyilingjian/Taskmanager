@@ -34,9 +34,10 @@ class ProjectsRepository{
         if($request->hasFile('thumbnail')){
             $thumb = $request->thumbnail;
             $name = $thumb->hashName();
-            $thumb->storeAs('public/thumbs/original',$name); //储存原始图片位置
-
-            $new_path = storage_path('app/public/thumbs/cropped/'.$name); //storage_path函数返回storage目录的完整路径。你也可以使用storage_path函数来设置存储目录下指定文件的完整路径：
+            $thumb->storeAs('thumbs/original',$name); //储存原始图片位置
+            // E:\wamp\www\Taskmanager\storage\app/public/thumbs/cropped/
+            // E:\wamp\www\Taskmanager\storage\app/public/thumbs/cropped/
+            $new_path = public_path('app/thumbs/cropped/'.$name); //storage_path函数返回storage目录的完整路径。你也可以使用storage_path函数来设置存储目录下指定文件的完整路径：
             /**
              * Imgage图象处理类使用文档：http://image.intervention.io/getting_started/installation
              */
