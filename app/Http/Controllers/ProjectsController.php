@@ -35,6 +35,7 @@ class ProjectsController extends Controller
                 'user_id' => $request->user()->id
             ]);
         */
+        dd($request);
         $this->repo->create($request);
 
     }
